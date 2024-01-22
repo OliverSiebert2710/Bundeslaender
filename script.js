@@ -121,15 +121,10 @@ function displayFilteredStates(filteredStates) {
 
     // Anzeige der gefilterten Bundesländer
     filteredStates.forEach(content => {
-        states.innerHTML += `
-        <a target="_blank" class="states-link" href="${content.url}">
-        <div class="states-container">
-            <div class="states-names">${content.name}</div>
-            <div class="population-container">${content.population} Millionen</div>
-        </div>
-        </a>`;
+        states.innerHTML += renderFilteredStates(content);
+
     });
-    showButton()
+    showButton();
 }
 
 // Beispielaufruf für einen Klick auf den Buchstaben 'A'
@@ -161,6 +156,16 @@ function contentTemplate(content) {
     <div class="states-container">
         <div class="states-names">${content['name']}</div>
         <div class="population-container">${content['population']} Millionen</div>
+    </div>
+    </a>`;
+}
+
+function renderFilteredStates(content) {
+    return `
+    <a target="_blank" class="states-link" href="${content.url}">
+    <div class="states-container">
+        <div class="states-names">${content.name}</div>
+        <div class="population-container">${content.population} Millionen</div>
     </div>
     </a>`;
 }
