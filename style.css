@@ -1,0 +1,87 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: rgb(221, 221, 221);
+    max-width: 1024px;
+    margin: 0 auto; /* Zentriert den Header */
+}
+
+h1 {
+    color: rgb(102, 102, 102);
+    padding: 15px
+}
+
+.content {
+    max-width: 1024px;
+    margin: 0 auto; /* Zentriert den Container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.states-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.states-container {
+    margin: 5px 0 5px 0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    border: 10px solid rgb(238, 238, 238);
+    padding: 10px;
+}
+
+.states-container:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.population-container {
+    color: rgb(153, 172, 202);
+}
+
+.letter-container {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.letter {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(221,221,221);
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.letter:first-child {
+    margin-left: 0;
+}
+
+.load {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(221,221,221);
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
